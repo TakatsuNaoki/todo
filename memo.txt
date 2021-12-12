@@ -1,0 +1,7 @@
+todo task_data
+
+id int autoincrement
+task text
+date text
+
+ CREATE TABLE tasks(id INT AUTO_INCREMENT NOT NULL PRIMARY KEY, name text, date text);

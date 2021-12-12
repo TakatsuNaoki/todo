@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "electron": "^16.0.4",
+    "mysql2": "^2.3.3"
+  }
+}

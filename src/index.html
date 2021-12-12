@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+	<title>Todoアプリ</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="logo">
+				<a href="top.html">todo</a>
+			</div>
+		</header>
+		<main>
+			<div class="today">
+				<span></span>
+			</div>
+			<div class="tasks">
+				<div class="new-tasks">
+					<p class="heading">未着手タスク</p>
+					<div class="tasks-wrapper">
+						<!-- <div class="task">
+							<p>
+								<span class="task-name">ひな形1　未着手</span>
+								<span class="task-date">2021/12/11</span>
+								<span class="task-priority">優先度:高</span>
+								<span class="button"><button type="submit" class="move-prog-btn">進行中へ</button><button type="submit" class="move-done-btn">完了済みへ</button><button type="button" data-micromodal-trigger="modal-1" class="edit-task-btn">編集</button></span>
+							</p>
+						</div> -->
+					</div>
+				</div>
+				<div class="prog-tasks">
+					<p class="heading">進行中タスク</p>
+					<div class="tasks-wrapper"></div>
+				</div>
+				<div class="done-tasks">
+					<p class="heading">完了済みタスク</p>
+					<div class="tasks-wrapper"></div>
+				</div>
+				<div class="add-task">
+					<p class="heading">タスク追加</p>
+					<div class="add-form">
+						<p>タスク名</p>
+						<p><input type="text" class="task-name"></p>
+						<p>締め切り</p>
+						<p><input type="datetime-local" name="date" class="task-date"></p>
+						<p>優先度</p>
+						<p>
+							<label><input type="radio" value="high" class="priority high" name="add-tasks-priority">高</label>
+							<label><input type="radio" value="mid" class="priority mid" name="add-tasks-priority" checked>中</label>
+							<label><input type="radio" value="low" class="priority low" name="add-tasks-priority">低</label>
+						</p>
+						<p>
+							<button type="submit" class="add-btn">追加</button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<div id="modal-1" aria-hidden="true" class="micromodal-slide modal">
+			<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+				<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
+					<header class="modal__header">
+						<h2 id="modal-1-title" class="modal__title">タスクの編集</h2>
+						<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+					</header>
+					<div id="modal-1-content" class="modal__content">
+						<div class="edit-task">
+							<div class="add-form">
+								<p>タスク名</p>
+								<p><input type="text" class="task-name"></p>
+								<p>締め切り</p>
+								<p><input type="datetime-local" name="date" class="task-date"></p>
+								<p>優先度</p>
+								<p>
+									<label><input type="radio" value="high" class="priority high" name="edit-task-priority">高</label>
+									<label><input type="radio" value="mid" class="priority mid" name="edit-task-priority">中</label>
+									<label><input type="radio" value="low" class="priority low" name="edit-task-priority">低</label>
+								</p>
+								<p>
+									<button type="submit" class="update-task-btn">更新</button>
+									<button type="submit" class="delete-task-btn">削除</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+</div>
+<script type="text/javascript" src="init.js"></script>
+<script type="text/javascript" src="database.js"></script>
+<script src="micromodal.min.js"></script>
+<script>
+	MicroModal.init({
+		disableScroll: true,
+		awaitOpenAnimation: true,
+		awaitCloseAnimation: true,
+		onShow: modal => closeModal(),
+	});
+</script>
+</body>
+</html>

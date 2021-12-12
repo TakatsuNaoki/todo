@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #36393F;
+}
+.wrapper{
+	color: #DCDDDE;
+	margin-left: 1em;
+}
+
+header{
+	height: 4em;
+}
+header .logo{
+	font-size: 3em;
+
+}
+header .logo a{
+	color: #DCDDDE;
+	text-decoration: none;
+}
+main{
+	margin top: 2em;
+}
+/*main*/
+main .today{
+	font-size: 2.5em;
+}
+main  p.heading{
+	font-size: 1.5em;
+}
+main .tasks{
+	display: flex;
+	align-items: flex-start;
+	gap:0 2em;
+}
+main .tasks > div{
+	width: 15em;
+	background: #696969;
+}
+main .tasks-wrapper{
+	display: flex;
+	flex-direction: column;
+	gap:0.5em 0;
+}
+main .tasks-wrapper .task{
+	border: solid 1px #b8b9ba;
+	margin: 0 5px;
+	/*max-width: 20em;*/
+
+}
+main .tasks-wrapper .task.checked{
+	
+}
+main .task p{
+	height: 100%;
+}
+main .task p{
+	margin-left: 0.5em;
+}
+main .task span{
+	display: block;
+}
+main .task span.button{
+	display: flex;
+}
+main .task span.button .move-new-btn{
+	order: 1;
+}
+main .task span.button .move-prog-btn{
+	order: 2;
+}
+main .task span.button .move-done-btn{
+	order: 3;
+}
+main .add-tasks{
+	padding: 0 5px 5px 5px;
+}
